@@ -24,12 +24,11 @@ bookForm.addEventListener("submit", function (event) {
         <td>${title}</td> 
         <td>${author}</td> 
         <td>${isbn}</td>
-        <td><button class="delete-btn">✖</button></td>
+        <td><button class="delete">✖</button></td>
     `;
 
     bookList.appendChild(trow);
 
-    // ✅ Corrected way to clear input fields
     document.getElementById("title").value = "";
     document.getElementById("author").value = "";
     document.getElementById("isbn").value = "";
@@ -37,9 +36,9 @@ bookForm.addEventListener("submit", function (event) {
     console.log("Cleared:", title, author, isbn);
 });
 
-// ✅ Corrected delete functionality - Move outside submit event
+
 bookList.addEventListener("click", function (event) {
-    if (event.target.classList.contains("delete-btn")) {
+    if (event.target.classList.contains("delete")) {
         event.target.parentElement.parentElement.remove();
     }
 });

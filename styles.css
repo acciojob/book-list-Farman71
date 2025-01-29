@@ -83,7 +83,7 @@ tr:nth-child(even) {
     background-color: #f5f5f5;
 }
 
-.delete-btn {
+.delete {
     background-color: red;
     color: white;
     border: none;
@@ -95,6 +95,6 @@ tr:nth-child(even) {
     text-align: center;
 }
 
-.delete-btn:hover {
+.delete:hover {
     background-color: darkred;
 }
